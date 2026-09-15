@@ -1,0 +1,101 @@
+﻿@model IEnumerable<MusicCatalog.Models.AdminArtist>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.strArtist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strLabel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idLabel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.intFormedYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.intBornYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strStyle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strGenre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strBiographyEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strGender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.intMembers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strArtistThumb)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.strArtist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strLabel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idLabel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.intFormedYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.intBornYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strStyle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strGenre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strBiographyEN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.intMembers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strArtistThumb)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idArtist">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idArtist">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idArtist">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<MusicCatalogNoAPI_Test.Models.AdminAlbum>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Artist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idLabel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strAlbum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strArtist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.intYearReleased)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strStyle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strGenre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strLabel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strReleaseFormat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strAlbumThumb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.strDescriptionEN)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artist.idArtist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idLabel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strAlbum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strArtist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.intYearReleased)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strStyle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strGenre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strLabel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strReleaseFormat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strAlbumThumb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.strDescriptionEN)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idAlbum">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idAlbum">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idAlbum">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

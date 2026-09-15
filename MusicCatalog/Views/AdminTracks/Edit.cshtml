@@ -1,0 +1,84 @@
+﻿@model MusicCatalog.Models.AdminTrack
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>AdminTrack</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="idTrack" />
+            <div class="form-group">
+                <label asp-for="idAlbum" class="control-label"></label>
+                <select asp-for="idAlbum" class="form-control" asp-items="ViewBag.idAlbum"></select>
+                <span asp-validation-for="idAlbum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idArtist" class="control-label"></label>
+                <input asp-for="idArtist" class="form-control" />
+                <span asp-validation-for="idArtist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strTrack" class="control-label"></label>
+                <input asp-for="strTrack" class="form-control" />
+                <span asp-validation-for="strTrack" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strAlbum" class="control-label"></label>
+                <input asp-for="strAlbum" class="form-control" />
+                <span asp-validation-for="strAlbum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strArtist" class="control-label"></label>
+                <input asp-for="strArtist" class="form-control" />
+                <span asp-validation-for="strArtist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="intDuration" class="control-label"></label>
+                <input asp-for="intDuration" class="form-control" />
+                <span asp-validation-for="intDuration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strGenre" class="control-label"></label>
+                <input asp-for="strGenre" class="form-control" />
+                <span asp-validation-for="strGenre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strStyle" class="control-label"></label>
+                <input asp-for="strStyle" class="form-control" />
+                <span asp-validation-for="strStyle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strDescriptionEN" class="control-label"></label>
+                <input asp-for="strDescriptionEN" class="form-control" />
+                <span asp-validation-for="strDescriptionEN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strTrackThumb" class="control-label"></label>
+                <input asp-for="strTrackThumb" class="form-control" />
+                <span asp-validation-for="strTrackThumb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strMusicVidCompany" class="control-label"></label>
+                <input asp-for="strMusicVidCompany" class="form-control" />
+                <span asp-validation-for="strMusicVidCompany" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

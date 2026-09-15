@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|c:\\programming\\uni\\3.1\\musiccatalog v4 user like and unlike artist, album, track\\musiccatalog\\musiccatalog\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|solutionrelative:musiccatalog\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|c:\\programming\\uni\\3.1\\musiccatalog v4 user like and unlike artist, album, track\\musiccatalog\\musiccatalog\\views\\home\\albumsdata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|solutionrelative:musiccatalog\\views\\home\\albumsdata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|c:\\programming\\uni\\3.1\\musiccatalog v4 user like and unlike artist, album, track\\musiccatalog\\musiccatalog\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|solutionrelative:musiccatalog\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|c:\\programming\\uni\\3.1\\musiccatalog v4 user like and unlike artist, album, track\\musiccatalog\\musiccatalog\\models\\album.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|solutionrelative:musiccatalog\\models\\album.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|c:\\programming\\uni\\3.1\\musiccatalog v4 user like and unlike artist, album, track\\musiccatalog\\musiccatalog\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|solutionrelative:musiccatalog\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|c:\\programming\\uni\\3.1\\musiccatalog v4 user like and unlike artist, album, track\\musiccatalog\\musiccatalog\\views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{26C8691F-4D96-4BE4-BB85-8CB634856979}|MusicCatalog\\MusicCatalog.csproj|solutionrelative:musiccatalog\\views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Album.cs",
+              "DocumentMoniker": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Models\\Album.cs",
+              "RelativeDocumentMoniker": "MusicCatalog\\Models\\Album.cs",
+              "ToolTip": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Models\\Album.cs",
+              "RelativeToolTip": "MusicCatalog\\Models\\Album.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T20:26:39.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "MusicCatalog\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "MusicCatalog\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T14:30:26.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MusicCatalog\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MusicCatalog\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T14:28:55.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MusicCatalog\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MusicCatalog\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAAAJsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T19:50:42.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlbumsData.cshtml",
+              "DocumentMoniker": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Views\\Home\\AlbumsData.cshtml",
+              "RelativeDocumentMoniker": "MusicCatalog\\Views\\Home\\AlbumsData.cshtml",
+              "ToolTip": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Views\\Home\\AlbumsData.cshtml",
+              "RelativeToolTip": "MusicCatalog\\Views\\Home\\AlbumsData.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-24T19:53:46.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserProfile.cshtml",
+              "DocumentMoniker": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Views\\Home\\UserProfile.cshtml",
+              "RelativeDocumentMoniker": "MusicCatalog\\Views\\Home\\UserProfile.cshtml",
+              "ToolTip": "C:\\Programming\\Uni\\3.1\\MusicCatalog v4 user like and unlike artist, album, track\\MusicCatalog\\MusicCatalog\\Views\\Home\\UserProfile.cshtml",
+              "RelativeToolTip": "MusicCatalog\\Views\\Home\\UserProfile.cshtml",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAmwHYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T13:34:55.243Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

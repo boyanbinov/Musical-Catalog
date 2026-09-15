@@ -1,0 +1,183 @@
+﻿@* @model MusicCatalog.Models.UserProfileViewModel *@
+
+<h2>Your Liked Content</h2>
+
+<!-- Button to toggle between Artists and Albums -->
+<div>
+    <button id="showArtistsBtn" class="btn btn-primary" onclick="showLikedArtists()">Liked Artists</button>
+    <button id="showAlbumsBtn" class="btn btn-secondary" onclick="showLikedAlbums()">Liked Albums</button>
+    <button id="showTracksBtn" class="btn btn-secondary" onclick="showLikedTracks()">Liked Tracks</button>
+</div>
+
+<!-- Displaying Liked Artists -->
+<div id="likedArtistsSection">
+    <h3>Your Liked Artists</h3>
+    @if (ViewData["LikedArtists"] != null)
+    {
+        var likedArtists = (List<MusicCatalog.Models.Artist>)ViewData["LikedArtists"];
+        if (likedArtists.Count > 0)
+        {
+            foreach (var artist in likedArtists)
+            {
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <div style="flex: 1; padding-right: 20px;">
+                        <h1><strong>Artist Name:</strong> @artist.strArtist</h1>
+                        <p><strong>Label:</strong> @artist.strLabel</p>
+                        <p><strong>Formed Year:</strong> @(artist.intFormedYear != 0 ? artist.intFormedYear.ToString() : "")</p>
+                        <p><strong>Born Year:</strong> @(artist.intBornYear != 0 ? artist.intBornYear.ToString() : "")</p>
+                        <p><strong>Style:</strong> @artist.strStyle</p>
+                        <p><strong>Genre:</strong> @artist.strGenre</p>
+                        <p><strong>Biography:</strong> @artist.strBiographyEN</p>
+                        <p><strong>Gender:</strong> @artist.strGender</p>
+                        <p><strong>Members Count:</strong> @(artist.intMembers != 0 ? artist.intMembers.ToString() : "")</p>
+                        <p><strong>Country:</strong> @artist.strCountry</p>
+                        <form asp-action="UnlikeArtistFromUserProfile" method="post" style="display:inline;">
+                            <input type="hidden" name="idArtist" value="@artist.idArtist" />
+                            <button type="submit" class="btn btn-danger">Unlike</button>
+                        </form>
+                    </div>
+                    <div style="flex-shrink: 0;">
+                        @if (!string.IsNullOrEmpty(artist.strArtistThumb))
+                        {
+                            <img src="@artist.strArtistThumb" alt="@artist.strArtistThumb" style="max-width: 35vh; height: 35vh;" />
+                        }
+                    </div>
+                </div>
+                <hr />
+            }
+        }
+        else
+        {
+            <p>You have not liked any artists yet.</p>
+        }
+    }
+</div>
+
+<!-- Displaying Liked Albums -->
+<div id="likedAlbumsSection" style="display:none;">
+    <h3>Your Liked Albums</h3>
+    @if (ViewData["LikedAlbums"] != null)
+    {
+        var likedAlbums = (List<MusicCatalog.Models.Album>)ViewData["LikedAlbums"];
+        if (likedAlbums.Count > 0)
+        {
+            foreach (var album in likedAlbums)
+            {
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <div style="flex: 1; padding-right: 20px;">
+                        <h1><strong>Album Name:</strong> @album.strAlbum</h1>
+                        <p><strong>Artist:</strong> @album.strArtist</p>
+                        <p><strong>Release Year:</strong> @(album.intYearReleased != 0 ? album.intYearReleased.ToString() : "")</p>
+                        <p><strong>Genre:</strong> @album.strGenre</p>
+                        <p><strong>Style:</strong> @album.strStyle</p>
+                        <form asp-action="UnlikeAlbumFromUserProfile" method="post" style="display:inline;">
+                            <input type="hidden" name="idAlbum" value="@album.idAlbum" />
+                            <input type="hidden" name="activeTab" value="albums" />
+                            <button type="submit" class="btn btn-danger">Unlike</button>
+                        </form>
+                    </div>
+                    <div style="flex-shrink: 0;">
+                        @if (!string.IsNullOrEmpty(album.strAlbumThumb))
+                        {
+                            <img src="@album.strAlbumThumb" alt="@album.strAlbum" style="max-width: 35vh; height: 35vh;" />
+                        }
+                    </div>
+                </div>
+                <hr />
+            }
+        }
+        else
+        {
+            <p>You have not liked any albums yet.</p>
+        }
+    }
+</div>
+
+<div id="likedTracksSection" style="display:none;">
+    <h3>Your Liked Tracks</h3>
+    @if (ViewData["LikedTracks"] != null)
+    {
+        var likedTracks = (List<MusicCatalog.Models.Track>)ViewData["LikedTracks"];
+        if (likedTracks.Count > 0)
+        {
+            foreach (var track in likedTracks)
+            {
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <div style="flex: 1; padding-right: 20px;">
+                        <h1><strong>Track Name:</strong> @track.strTrack</h1>
+                        <p><strong>Artist:</strong> @track.strArtist</p>
+                        <p><strong>Album:</strong> @track.strAlbum</p>
+                        <p><strong>Genre:</strong> @track.strGenre</p>
+                        <p><strong>Style:</strong> @track.strStyle</p>
+                        <p><strong>Duration:</strong> @((track.intDuration / 60000) + ":" + ((track.intDuration % 60000) / 1000).ToString("D2")) min</p>
+                        <form asp-action="UnlikeTrackFromUserProfile" method="post" style="display:inline;">
+                            <input type="hidden" name="idTrack" value="@track.idTrack" />
+                            <input type="hidden" name="artistName" value="@track.strArtist" />
+                            <input type="hidden" name="trackName" value="@track.strTrack" />
+                            <input type="hidden" name="activeTab" value="tracks" /> <!-- Include activeTab here -->
+                            <button type="submit" class="btn btn-danger">Unlike</button>
+                        </form>
+                    </div>
+                    <div style="flex-shrink: 0;">
+                        @if (!string.IsNullOrEmpty(track.strTrackThumb))
+                        {
+                            <img src="@track.strTrackThumb" alt="@track.strTrack" style="max-width: 35vh; height: 35vh;" />
+                        }
+                    </div>
+                </div>
+                <hr />
+            }
+        }
+        else
+        {
+            <p>You have not liked any tracks yet.</p>
+        }
+    }
+</div>
+
+<script>
+    function showLikedArtists() {
+        document.getElementById("likedArtistsSection").style.display = "block";
+        document.getElementById("likedAlbumsSection").style.display = "none";
+        document.getElementById("likedTracksSection").style.display = "none";
+        document.getElementById("showArtistsBtn").classList.add("btn-primary");
+        document.getElementById("showAlbumsBtn").classList.remove("btn-primary");
+        document.getElementById("showAlbumsBtn").classList.add("btn-secondary");
+        document.getElementById("showTracksBtn").classList.remove("btn-primary");
+        document.getElementById("showTracksBtn").classList.add("btn-secondary");
+    }
+
+    function showLikedAlbums() {
+        document.getElementById("likedArtistsSection").style.display = "none";
+        document.getElementById("likedAlbumsSection").style.display = "block";
+        document.getElementById("likedTracksSection").style.display = "none";
+        document.getElementById("showAlbumsBtn").classList.add("btn-primary");
+        document.getElementById("showArtistsBtn").classList.remove("btn-primary");
+        document.getElementById("showArtistsBtn").classList.add("btn-secondary");
+        document.getElementById("showTracksBtn").classList.remove("btn-primary");
+        document.getElementById("showTracksBtn").classList.add("btn-secondary");
+    }
+
+    function showLikedTracks() {
+        document.getElementById("likedArtistsSection").style.display = "none";
+        document.getElementById("likedAlbumsSection").style.display = "none";
+        document.getElementById("likedTracksSection").style.display = "block";
+        document.getElementById("showTracksBtn").classList.add("btn-primary");
+        document.getElementById("showArtistsBtn").classList.remove("btn-primary");
+        document.getElementById("showArtistsBtn").classList.add("btn-secondary");
+        document.getElementById("showAlbumsBtn").classList.remove("btn-primary");
+        document.getElementById("showAlbumsBtn").classList.add("btn-secondary");
+    }
+
+    // Check if 'activeTab' exists in the query string, and show the correct section
+    // Check if 'activeTab' exists in the query string, and show the correct section
+    var activeTab = '@ViewData["activeTab"]';
+
+    if (activeTab === "albums") {
+        showLikedAlbums();
+    } else if (activeTab === "tracks") {
+        showLikedTracks();
+    } else {
+        showLikedArtists();
+    }
+</script>

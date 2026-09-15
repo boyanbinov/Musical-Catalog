@@ -1,0 +1,102 @@
+﻿@model MusicCatalogNoAPI_Test.Models.AdminAlbum
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create Album</h1>
+
+<h4>Album</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Artist Dropdown -->
+            <div class="form-group">
+                <label asp-for="idArtist" class="control-label"></label>
+                <select asp-for="idArtist" class="form-control" asp-items="ViewBag.idArtist">
+                    <option value="">-- Select Artist --</option>
+                </select>
+                <span asp-validation-for="idArtist" class="text-danger"></span>
+            </div>
+
+            <!-- Album Name -->
+            <div class="form-group">
+                <label asp-for="strAlbum" class="control-label"></label>
+                <input asp-for="strAlbum" class="form-control" />
+                <span asp-validation-for="strAlbum" class="text-danger"></span>
+            </div>
+
+            <!-- Artist Name (Hidden, Auto-Populated) -->
+            <div hidden class="form-group">
+                <label asp-for="strArtist" class="control-label"></label>
+                <input asp-for="strArtist" class="form-control" readonly="readonly" />
+            </div>
+
+            <!-- Year Released -->
+            <div class="form-group">
+                <label asp-for="intYearReleased" class="control-label"></label>
+                <input asp-for="intYearReleased" class="form-control" />
+                <span asp-validation-for="intYearReleased" class="text-danger"></span>
+            </div>
+
+            <!-- Genre -->
+            <div class="form-group">
+                <label asp-for="strGenre" class="control-label"></label>
+                <input asp-for="strGenre" class="form-control" />
+                <span asp-validation-for="strGenre" class="text-danger"></span>
+            </div>
+
+            <!-- Style -->
+            <div class="form-group">
+                <label asp-for="strStyle" class="control-label"></label>
+                <input asp-for="strStyle" class="form-control" />
+                <span asp-validation-for="strStyle" class="text-danger"></span>
+            </div>
+
+            <!-- Label -->
+            <div class="form-group">
+                <label asp-for="strLabel" class="control-label"></label>
+                <input asp-for="strLabel" class="form-control" />
+                <span asp-validation-for="strLabel" class="text-danger"></span>
+            </div>
+
+            <!-- Release Format -->
+            <div class="form-group">
+                <label asp-for="strReleaseFormat" class="control-label"></label>
+                <input asp-for="strReleaseFormat" class="form-control" />
+                <span asp-validation-for="strReleaseFormat" class="text-danger"></span>
+            </div>
+
+            <!-- Album Thumbnail -->
+            <div class="form-group">
+                <label asp-for="strAlbumThumb" class="control-label"></label>
+                <input asp-for="strAlbumThumb" class="form-control" />
+                <span asp-validation-for="strAlbumThumb" class="text-danger"></span>
+            </div>
+
+            <!-- Album Description -->
+            <div class="form-group">
+                <label asp-for="strDescriptionEN" class="control-label"></label>
+                <textarea asp-for="strDescriptionEN" class="form-control"></textarea>
+                <span asp-validation-for="strDescriptionEN" class="text-danger"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <input type="submit" value="Create Album" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

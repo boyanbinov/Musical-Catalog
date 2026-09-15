@@ -1,0 +1,131 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MusicCatalog
+build_property.RootNamespace = MusicCatalog
+build_property.ProjectDir = C:\Programming\Uni\3.1\MusicCatalog v4 user like and unlike artist, album, track\MusicCatalog\MusicCatalog\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Programming\Uni\3.1\MusicCatalog v4 user like and unlike artist, album, track\MusicCatalog\MusicCatalog
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminAlbums/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BbGJ1bXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminAlbums/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BbGJ1bXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminAlbums/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BbGJ1bXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminAlbums/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BbGJ1bXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminAlbums/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BbGJ1bXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminArtists/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BcnRpc3RzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminArtists/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BcnRpc3RzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminArtists/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BcnRpc3RzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminArtists/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BcnRpc3RzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminArtists/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5BcnRpc3RzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminTracks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UcmFja3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminTracks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UcmFja3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminTracks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UcmFja3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminTracks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UcmFja3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/AdminTracks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5UcmFja3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/Home/AlbumsData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGJ1bXNEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/Home/ArtistData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcnRpc3REYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/Home/TracksDataGet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUcmFja3NEYXRhR2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/Home/UserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programming/Uni/3.1/MusicCatalog v4 user like and unlike artist\, album\, track/MusicCatalog/MusicCatalog/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-kahk39xbfb

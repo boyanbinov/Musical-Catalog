@@ -1,0 +1,92 @@
+﻿@model MusicCatalog.Models.AdminTrack
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create Track</h1>
+
+<h4>Track</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Album Dropdown -->
+            <div class="form-group">
+                <label asp-for="idAlbum" class="control-label"></label>
+                <select asp-for="idAlbum" class="form-control" asp-items="ViewBag.idAlbum">
+                    <option value="">-- Select Album --</option>
+                </select>
+                <span asp-validation-for="idAlbum" class="text-danger"></span>
+            </div>
+
+            <!-- Track Name -->
+            <div class="form-group">
+                <label asp-for="strTrack" class="control-label"></label>
+                <input asp-for="strTrack" class="form-control" />
+                <span asp-validation-for="strTrack" class="text-danger"></span>
+            </div>
+
+            <!-- Album Name (Auto-Populated) -->
+            <div hidden class="form-group">
+                <label asp-for="strAlbum" class="control-label"></label>
+                <input asp-for="strAlbum" class="form-control" readonly="readonly" />
+            </div>
+
+            <!-- Artist Name (Auto-Populated) -->
+            <div hidden class="form-group">
+                <label asp-for="strArtist" class="control-label"></label>
+                <input asp-for="strArtist" class="form-control" readonly="readonly" />
+            </div>
+
+            <!-- Duration -->
+            <div class="form-group">
+                <label asp-for="intDuration" class="control-label"></label>
+                <input asp-for="intDuration" class="form-control" />
+                <span asp-validation-for="intDuration" class="text-danger"></span>
+            </div>
+
+            <!-- Genre -->
+            <div class="form-group">
+                <label asp-for="strGenre" class="control-label"></label>
+                <input asp-for="strGenre" class="form-control" />
+                <span asp-validation-for="strGenre" class="text-danger"></span>
+            </div>
+
+            <!-- Style -->
+            <div class="form-group">
+                <label asp-for="strStyle" class="control-label"></label>
+                <input asp-for="strStyle" class="form-control" />
+                <span asp-validation-for="strStyle" class="text-danger"></span>
+            </div>
+
+            <!-- Track Thumbnail -->
+            <div class="form-group">
+                <label asp-for="strTrackThumb" class="control-label"></label>
+                <input asp-for="strTrackThumb" class="form-control" />
+                <span asp-validation-for="strTrackThumb" class="text-danger"></span>
+            </div>
+
+            <!-- Music Video Company -->
+            <div class="form-group">
+                <label asp-for="strMusicVidCompany" class="control-label"></label>
+                <input asp-for="strMusicVidCompany" class="form-control" />
+                <span asp-validation-for="strMusicVidCompany" class="text-danger"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <input type="submit" value="Create Track" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

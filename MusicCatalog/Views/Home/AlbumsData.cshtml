@@ -1,0 +1,92 @@
+﻿@{
+    // Ensure ViewData values are checked for null before usage
+    var albums = ViewData["albums"] as List<Album> ?? new List<Album>();
+    int currentPage = ViewData["currentPage"] != null ? (int)ViewData["currentPage"] : 1;
+    int totalPages = ViewData["totalPages"] != null ? (int)ViewData["totalPages"] : 1;
+    var artistName = ViewData["artist_name"]?.ToString();
+}
+
+<h2>Search for Albums Information</h2>
+
+@using (Html.BeginForm("AlbumsData", "Home", FormMethod.Post))
+{
+    <p>
+        Artist Name: @Html.TextBox("artist_name")
+        <input type="submit" value="Check" />
+    </p>
+}
+
+@if (albums.Count > 0)
+{
+    <h3>Results for: @artistName</h3>
+
+    @* Display each album similar to the artist template *@
+    @foreach (var album in albums)
+    {
+        <div style="display: flex; align-items: center; margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+            <div style="flex: 1; padding-right: 20px;">
+                <h3><strong>Album Name:</strong> @album.strAlbum</h3>
+                <p><strong>Artist:</strong> @album.strArtist</p>
+                <p><strong>Release Year:</strong> @(album.intYearReleased != 0 ? album.intYearReleased.ToString() : "N/A")</p>
+                <p><strong>Genre:</strong> @album.strGenre</p>
+                <p><strong>Style:</strong> @album.strStyle</p>
+                <p><strong>Label:</strong> @album.strLabel</p>
+
+                @if (!string.IsNullOrEmpty(album.strDescriptionEN))
+                {
+                    <p><strong>Description:</strong> @album.strDescriptionEN</p>
+                }
+
+                @* Like/Unlike Button *@
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form asp-action="@(album.IsLiked ? "UnlikeAlbum" : "LikeAlbum")" method="post">
+                        <button type="submit" class="btn @(album.IsLiked ? "btn-danger" : "btn-primary")">
+                            @(album.IsLiked ? "Unlike" : "Like")
+                        </button>
+                        <input type="hidden" name="idAlbum" value="@album.idAlbum" />
+                        <input type="hidden" name="strAlbum" value="@album.strAlbum" />
+                        <input type="hidden" name="strArtist" value="@album.strArtist" />
+                        <input type="hidden" name="intYearReleased" value="@album.intYearReleased" />
+                        <input type="hidden" name="strGenre" value="@album.strGenre" />
+                        <input type="hidden" name="strStyle" value="@album.strStyle" />
+                        <input type="hidden" name="strLabel" value="@album.strLabel" />
+                        <input type="hidden" name="strAlbumThumb" value="@album.strAlbumThumb" />
+                        <input type="hidden" name="currentPage" value="@currentPage" /> <!-- Pass the current page -->
+                    </form>
+                }
+            </div>
+
+            <div style="flex-shrink: 0;">
+                @if (!string.IsNullOrEmpty(album.strAlbumThumb))
+                {
+                    <img src="@album.strAlbumThumb" alt="@album.strAlbum" style="max-width: 35vh; height: 35vh; border-radius: 5px;" />
+                }
+            </div>
+        </div>
+    }
+
+    @* Pagination Controls *@
+    <div style="margin-top: 20px; text-align: center;">
+        @if (currentPage > 1)
+        {
+            <a href="@Url.Action("AlbumsData", new { artist_name = artistName, page = currentPage - 1 })" class="btn btn-secondary">Previous</a>
+        }
+
+        @for (int i = 1; i <= totalPages; i++)
+        {
+            <a href="@Url.Action("AlbumsData", new { artist_name = artistName, page = i })" class="btn btn-outline-secondary @(i == currentPage ? "active" : "")">
+                @i
+            </a>
+        }
+
+        @if (currentPage < totalPages)
+        {
+            <a href="@Url.Action("AlbumsData", new { artist_name = artistName, page = currentPage + 1 })" class="btn btn-secondary">Next</a>
+        }
+    </div>
+}
+else
+{
+    <p>Please enter an artist name to view albums.</p>
+}

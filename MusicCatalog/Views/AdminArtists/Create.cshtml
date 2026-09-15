@@ -1,0 +1,88 @@
+﻿@model MusicCatalog.Models.AdminArtist
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AdminArtist</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="strArtist" class="control-label"></label>
+                <input asp-for="strArtist" class="form-control" />
+                <span asp-validation-for="strArtist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strLabel" class="control-label"></label>
+                <input asp-for="strLabel" class="form-control" />
+                <span asp-validation-for="strLabel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idLabel" class="control-label"></label>
+                <input asp-for="idLabel" class="form-control" />
+                <span asp-validation-for="idLabel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="intFormedYear" class="control-label"></label>
+                <input asp-for="intFormedYear" class="form-control" />
+                <span asp-validation-for="intFormedYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="intBornYear" class="control-label"></label>
+                <input asp-for="intBornYear" class="form-control" />
+                <span asp-validation-for="intBornYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strStyle" class="control-label"></label>
+                <input asp-for="strStyle" class="form-control" />
+                <span asp-validation-for="strStyle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strGenre" class="control-label"></label>
+                <input asp-for="strGenre" class="form-control" />
+                <span asp-validation-for="strGenre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strBiographyEN" class="control-label"></label>
+                <input asp-for="strBiographyEN" class="form-control" />
+                <span asp-validation-for="strBiographyEN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strGender" class="control-label"></label>
+                <input asp-for="strGender" class="form-control" />
+                <span asp-validation-for="strGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="intMembers" class="control-label"></label>
+                <input asp-for="intMembers" class="form-control" />
+                <span asp-validation-for="intMembers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strCountry" class="control-label"></label>
+                <input asp-for="strCountry" class="form-control" />
+                <span asp-validation-for="strCountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="strArtistThumb" class="control-label"></label>
+                <input asp-for="strArtistThumb" class="form-control" />
+                <span asp-validation-for="strArtistThumb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

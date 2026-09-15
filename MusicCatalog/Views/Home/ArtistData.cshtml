@@ -1,0 +1,68 @@
+﻿@{
+    var data = (Artist)ViewData["artist"];
+}
+
+<h2>Search for artist information</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Artist Name: @Html.TextBox("artist_name")
+        <input type="submit" value="check" />
+    </p>
+}
+
+
+@* @if (!string.IsNullOrEmpty(@data.strArtist))
+{ *@
+    @* Display artist data after form submission *@
+    @if (data != null)
+    {
+        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <div style="flex: 1; padding-right: 20px;">
+                <h1><strong>Artist Name:</strong> @data.strArtist</h1>
+                <p><strong>Label:</strong> @data.strLabel</p>
+                <p><strong>Formed Year:</strong> @(data.intFormedYear != 0 ? data.intFormedYear.ToString() : "")</p>
+                <p><strong>Born Year:</strong> @(data.intBornYear != 0 ? data.intBornYear.ToString() : "")</p>
+                <p><strong>Style:</strong> @data.strStyle</p>
+                <p><strong>Genre:</strong> @data.strGenre</p>
+                <p><strong>Biography:</strong> @data.strBiographyEN</p>
+                <p><strong>Gender:</strong> @data.strGender</p>
+                <p><strong>Members Count:</strong> @(data.intMembers != 0 ? data.intMembers.ToString() : "")</p>
+                <p><strong>Country:</strong> @data.strCountry</p>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form asp-action="@((ViewData["isLiked"] as bool?) == true ? "UnlikeArtist" : "LikeArtist")" method="post" style="margin-top: 10px;">
+                        <button type="submit" class="btn @(ViewData["isLiked"] as bool? == true ? "btn-danger" : "btn-primary")">
+                            @(ViewData["isLiked"] as bool? == true ? "Unlike" : "Like")
+                        </button>
+                        @* Hidden fields for the data *@
+                        <input type="hidden" name="idArtist" value="@data.idArtist" />
+                        <input type="hidden" name="strArtist" value="@data.strArtist" />
+                        <input type="hidden" name="strLabel" value="@data.strLabel" />
+                        <input type="hidden" name="intFormedYear" value="@data.intFormedYear" />
+                        <input type="hidden" name="intBornYear" value="@data.intBornYear" />
+                        <input type="hidden" name="strStyle" value="@data.strStyle" />
+                        <input type="hidden" name="strGenre" value="@data.strGenre" />
+                        <input type="hidden" name="strBiographyEN" value="@data.strBiographyEN" />
+                        <input type="hidden" name="strGender" value="@data.strGender" />
+                        <input type="hidden" name="intMembers" value="@data.intMembers" />
+                        <input type="hidden" name="strCountry" value="@data.strCountry" />
+                        <input type="hidden" name="strArtistThumb" value="@data.strArtistThumb" />
+                    </form> 
+                }
+            </div>
+            <div style="flex-shrink: 0;">
+                @if (!string.IsNullOrEmpty(data.strArtistThumb))
+                {
+                    <img src="@data.strArtistThumb" alt="@data.strArtistThumb" style="max-width: 35vh; height: 35vh;" />
+                }
+            </div>
+        </div>
+
+    }
+@* } *@
+else
+{
+    <p>Please enter an artist name to get information.</p>
+}

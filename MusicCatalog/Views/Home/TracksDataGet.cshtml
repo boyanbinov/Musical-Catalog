@@ -1,0 +1,88 @@
+﻿@{
+    var track = (Track)ViewData["track"];
+    var artistName = ViewData["artist_name"]?.ToString();
+    var trackName = ViewData["track_name"]?.ToString();
+}
+
+<h2>Search for Track Information</h2>
+
+@using (Html.BeginForm("TracksData", "Home", FormMethod.Post))
+{
+    <p>
+        Artist Name: @Html.TextBox("artist_name", artistName)
+    </p>
+    <p>
+        Track Name: @Html.TextBox("track_name", trackName)
+    </p>
+    <input type="submit" value="Check" />
+}
+
+@if (track != null)
+{
+    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <div style="flex: 1; padding-right: 20px;">
+            <h3><strong>Artist Name:</strong> @track.strArtist</h3>
+            <h3><strong>Track Name:</strong> @track.strTrack</h3>
+            <p><strong>Album:</strong> @track.strAlbum</p>
+            @if (track.intDuration != null && track.intDuration > 0)
+            {
+                var durationInMilliseconds = track.intDuration;
+
+                // Convert milliseconds to minutes and seconds
+                var durationInSeconds = durationInMilliseconds / 1000;
+                var minutes = durationInSeconds / 60;
+                var seconds = durationInSeconds % 60;
+
+                <p><strong>Duration:</strong> @minutes minutes @seconds seconds</p>
+            }
+            else
+            {
+                <p><strong>Duration:</strong> Not available</p>
+            }
+            <p><strong>Genre:</strong> @track.strGenre</p>
+            <p><strong>Style:</strong> @track.strStyle</p>
+            <p><strong>Music Video Company:</strong> @track.strMusicVidCompany</p>
+
+            @if (!string.IsNullOrEmpty(track.strDescriptionEN))
+            {
+                <p><strong>Track Description:</strong> @track.strDescriptionEN</p>
+            }
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <form asp-action="@(track.IsLiked ? "UnlikeTrack" : "LikeTrack")" method="post">
+                    <button type="submit" class="btn @(track.IsLiked ? "btn-danger" : "btn-primary")">
+                        @(track.IsLiked ? "Unlike" : "Like")
+                    </button>
+                    @* Hidden fields for the data *@
+                    <input type="hidden" name="idTrack" value="@track.idTrack" />
+                    <input type="hidden" name="idArtist" value="@track.idArtist" />
+                    <input type="hidden" name="strArtist" value="@track.strArtist" />
+                    <input type="hidden" name="strTrack" value="@track.strTrack" />
+                    <input type="hidden" name="strAlbum" value="@track.strAlbum" />
+                    <input type="hidden" name="intDuration" value="@track.intDuration" />
+                    <input type="hidden" name="strGenre" value="@track.strGenre" />
+                    <input type="hidden" name="strStyle" value="@track.strStyle" />
+                    <input type="hidden" name="strMusicVidCompany" value="@track.strMusicVidCompany" />
+                    <input type="hidden" name="strDescriptionEN" value="@track.strDescriptionEN" />
+                    <input type="hidden" name="strTrackThumb" value="@track.strTrackThumb" />
+                </form>
+            }
+        </div>
+        <div>
+            @if (!string.IsNullOrEmpty(track.strTrackThumb))
+            {
+                <img src="@track.strTrackThumb" alt="@track.strTrack" style="max-width: 35vh; height: 35vh;" />
+            }
+        </div>
+    </div>
+}
+else
+{
+    <p>Please enter an artist and track name to get information.</p>
+}
+
+@if (!string.IsNullOrEmpty(ViewData["found"]?.ToString()))
+{
+    <p>@ViewData["found"]</p>
+}
